@@ -1,0 +1,76 @@
+#entire-site {
+    display: flex;
+    flex-direction: column;
+    color: #FFD60A;
+    background-color: #000000;
+}
+
+h1 {
+    font-family: 'Allerta Stencil';
+}
+
+#to-center {
+    text-align: center;
+    padding: 5%;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+.about-me-button {
+    flex: wrap;
+    background-color: #001D3D;
+    margin: 2%;
+}
+
+.projects-button {
+    flex: wrap;
+    background-color: #003566;
+    margin: 2%;
+}
+
+.contact-me-button {
+    flex: wrap;
+    background-color: #FFC300;
+    color: #001D3D;
+    margin: 2%;
+}
+
+#welcome-text {
+    font-size: 1000%;
+    margin: 10%;
+    padding-bottom: inherit;
+}
+
+#welcome-section {
+    flex: auto;
+    /* padding-bottom: 50%; */
+    font-size: 100%;
+    background-color: #000814;
+}
+
+#about-me {
+    flex: auto;
+    padding-bottom: 50%;
+    background-color: #001D3D;
+}
+
+#projects {
+    flex: auto;
+    padding-bottom: 50%;
+    background-color: #003566;
+}
+
+#contact-me {
+    flex: auto;
+    padding-bottom: 50%;
+    color: #001D3D;
+    background-color: #FFC300;
+}
+
+
+/* colors:  00814, 001D3D, 003566, FFC300, FFD60A*/
