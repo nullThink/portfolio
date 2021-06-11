@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 
 <head>
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style-light.css">
     <link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
 
     <title>Home | Antonio Alphonse</title>
@@ -12,12 +12,14 @@
 <body style="margin:0">
     <div id="entire-site">
         <div id="welcome-section">
-            <h1 id="welcome-text"></h1>
+            <div id="welcome-section" class="titles">
+                <h1 id="welcome-text"></h1>
+            </div>
 
             <div id="welcome-section" class="buttons-container">
-                <h1 id="to-center" class="about-me-button">About Me</h1>
-                <h1 id="to-center" class="projects-button">Projects</h1>
-                <h1 id="to-center" class="contact-me-button">Contact Me</h1>
+                <button id="to-center" class="about-me-button">About Me</button>
+                <button id="to-center" class="projects-button">Projects</button>
+                <button id="to-center" class="contact-me-button">Contact Me</button>
             </div>
         </div>
         <div id="about-me">
@@ -25,17 +27,30 @@
 
             <div id="about-me" class="content">
                 <img src="images/selfPic.jpg">
-                <!-- <h4> Hey! My name's Antonio Alphonse, and currently, I'm a sophomore at Tufts University!</h4> -->
-                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor libero lectus, eu accumsan lorem dapibus eget. Donec sollicitudin nisl eget varius congue. Morbi nulla sem, pellentesque nec lorem sit amet, egestas tempus nulla.
-                    Proin eu metus venenatis, ullamcorper dui non, hendrerit odio. Donec ut varius sem. Proin dui lectus, laoreet at cursus interdum, ornare at urna. Donec tincidunt, libero ac ornare molestie, orci elit porta est, vel mattis mi massa
-                    a nulla. Ut et maximus ligula. Sed ultricies quam ut ornare rutrum. Cras eu elit et nisl placerat malesuada a vel nisi. Fusce maximus lacus libero. Donec quis tellus vel ipsum mattis faucibus. Praesent laoreet pulvinar laoreet. Phasellus
-                    nec eleifend velit. Sed arcu neque, consequat eu purus nec, luctus cursus mauris. Nam maximus velit at pharetra placerat. Praesent nibh magna, luctus nec auctor iaculis, accumsan vitae nunc. Morbi eget nisl nec libero ornare pulvinar.
-                    Etiam condimentum posuere libero. Proin dictum turpis sed tellus ullamcorper, eu volutpat eros lacinia. Aliquam auctor velit justo, eget bibendum ex scelerisque et. Aliquam non lorem cursus, dictum justo placerat, feugiat tellus. Nulla
-                    et quam eget lacus lobortis finibus. Duis ornare in diam at semper. Curabitur at dui fermentum, imperdiet tellus sit amet, eleifend massa. Curabitur ac velit eu justo sodales ultricies. Donec rutrum interdum augue quis luctus. Praesent
-                    vehicula lectus massa, in porta neque vestibulum eget. Fusce vel elit venenatis, pellentesque nulla at, scelerisque risus. Nullam sem lacus, ullamcorper sed lacus in, convallis tincidunt est. Nulla dapibus sit amet metus at vestibulum.
-                    Vivamus convallis in felis non dignissim. Pellentesque tempor neque vel elit tincidunt hendrerit vitae ut libero. Sed malesuada pharetra risus, vitae vulputate libero pulvinar sit amet. Aliquam iaculis dui eu placerat dictum. Quisque
-                    pretium a tellus et hendrerit. Sed eget suscipit magna. In ullamcorper ac metus id euismod. Cras dignissim est erat, in fermentum ipsum pharetra id. Cras odio velit, consectetur a metus scelerisque, ultricies lobortis lectus. Phasellus
-                    mollis molestie nulla in fringilla. Proin sodales ultricies orci quis gravida. Vestibulum volutpat velit porttitor cursus pulvinar.</h4>
+                <div id="about-me" class="info">
+                    <span id="personal">
+                        <h2><u><strong>Name:</strong></u> <br> Antonio Alphonse</h2>
+                        <h2><u><strong>Hometown:</strong></u> <br> New Orleans, Louisiana</h2>
+                    </span>
+                    <span id="education">
+                        <h2><u><strong>Education:</strong></u> <br> Tufts University</h2>
+                        <h2><u><strong>Major:</strong></u> <br> Mechanical Engineering</h2>
+                        <h2><u><strong>Graduating Year:</strong></u> <br> 2024</h2></span>
+                    <span id="misc">
+                        <h2>
+                            <u><strong>Interests:</strong></u> 
+                            <ul>
+                            <li>Coding</li>
+                            <li>Video Games</li>
+                            <li>Overall enjoying life</li>
+                            <li>Learning new things</li>
+                            <li>Languages</li>
+                            <li>Writing essays for fun</li>
+                        </ul>
+                    </h2>
+                    </span>
+
+                </div>
             </div>
         </div>
         <div id="projects">
@@ -53,21 +68,23 @@
         </div>
         <div id="contact-me">
             <h1>Contact Me</h1>
-            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor libero lectus, eu accumsan lorem dapibus eget. Donec sollicitudin nisl eget varius congue. Morbi nulla sem, pellentesque nec lorem sit amet, egestas tempus nulla. Proin
-                eu metus venenatis, ullamcorper dui non, hendrerit odio. Donec ut varius sem. Proin dui lectus, laoreet at cursus interdum, ornare at urna. Donec tincidunt, libero ac ornare molestie, orci elit porta est, vel mattis mi massa a nulla. Ut
-                et maximus ligula. Sed ultricies quam ut ornare rutrum. Cras eu elit et nisl placerat malesuada a vel nisi. Fusce maximus lacus libero. Donec quis tellus vel ipsum mattis faucibus. Praesent laoreet pulvinar laoreet. Phasellus nec eleifend
-                velit. Sed arcu neque, consequat eu purus nec, luctus cursus mauris. Nam maximus velit at pharetra placerat. Praesent nibh magna, luctus nec auctor iaculis, accumsan vitae nunc. Morbi eget nisl nec libero ornare pulvinar. Etiam condimentum
-                posuere libero. Proin dictum turpis sed tellus ullamcorper, eu volutpat eros lacinia. Aliquam auctor velit justo, eget bibendum ex scelerisque et. Aliquam non lorem cursus, dictum justo placerat, feugiat tellus. Nulla et quam eget lacus
-                lobortis finibus. Duis ornare in diam at semper. Curabitur at dui fermentum, imperdiet tellus sit amet, eleifend massa. Curabitur ac velit eu justo sodales ultricies. Donec rutrum interdum augue quis luctus. Praesent vehicula lectus massa,
-                in porta neque vestibulum eget. Fusce vel elit venenatis, pellentesque nulla at, scelerisque risus. Nullam sem lacus, ullamcorper sed lacus in, convallis tincidunt est. Nulla dapibus sit amet metus at vestibulum. Vivamus convallis in felis
-                non dignissim. Pellentesque tempor neque vel elit tincidunt hendrerit vitae ut libero. Sed malesuada pharetra risus, vitae vulputate libero pulvinar sit amet. Aliquam iaculis dui eu placerat dictum. Quisque pretium a tellus et hendrerit.
-                Sed eget suscipit magna. In ullamcorper ac metus id euismod. Cras dignissim est erat, in fermentum ipsum pharetra id. Cras odio velit, consectetur a metus scelerisque, ultricies lobortis lectus. Phasellus mollis molestie nulla in fringilla.
-                Proin sodales ultricies orci quis gravida. Vestibulum volutpat velit porttitor cursus pulvinar.</h4>
+
+            <h4>Pellentesque tempor neque vel elit tincidunt hendrerit vitae ut libero. Sed malesuada pharetra risus, vitae vulputate libero pulvinar sit amet. Aliquam iaculis dui eu placerat dictum. Quisque pretium a tellus et hendrerit. Sed eget suscipit
+                magna. In ullamcorper ac metus id euismod. Cras dignissim est erat, in fermentum ipsum pharetra id. Cras odio velit, consectetur a metus scelerisque, ultricies lobortis lectus. Phasellus mollis molestie nulla in fringilla. Proin sodales
+                ultricies orci quis gravida. Vestibulum volutpat velit porttitor cursus pulvinar.
+            </h4>
+            <div id="personal-info-contain">
+                <h4 id="personal-info">Or better yet, here is my information.</h4>
+                <img id="personal-info" src="images/icon-email-512.png">
+                <a id="personal-info" href="https://www.linkedin.com/in/antonio-alphonse-jr-6ab2861a5/ ">
+                    <img id="personal-info" src="images/linkedin-image.png ">
+                </a>
+            </div>
         </div>
     </div>
 </body>
 
-<script type="text/javascript" src="script.js">
+<script type=" text/javascript " src="script.js ">
 </script>
 
 </html>

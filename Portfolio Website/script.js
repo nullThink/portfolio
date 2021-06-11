@@ -6,86 +6,112 @@ const projectsButton = document.querySelector(".projects-button");
 const contactMeButton = document.querySelector(".contact-me-button");
 
 const welcomeSection = document.querySelector("#welcome-section");
-// const aboutMeSection = document.querySelector("#about-me-section");
-// const projectsSection = document.querySelector("#projects-section");
-// const contactMeSection = document.querySelector("#contact-me-section");
+const aboutMeSection = document.querySelector("#about-me");
+const projectsSection = document.querySelector("#projects");
+const contactMeSection = document.querySelector("#contact-me");
 
-welcomeSection.style.height = window.innerHeight;
-// aboutMeSection.style.height = window.innerHeight;
-// projectsSection.style.height = window.innerHeight;
-// contactMeSection.style.height = window.innerHeight;
-//aboutMeButton.addEventListener('click', window.scrollTo(0, aboutMeSection.offsetTop));
-//projectsButton.addEventListener('click', window.scrollTo(0, projectsSection.offsetTop));
-//contactMeButton.addEventListener('click', window.scrollTo(0, contactMeSection.offsetTop));
+welcomeSection.style.height = window.innerHeight + 100;
+
+// aboutMeButton.addEventListener('click', aboutMeSection.scrollIntoView());
+// projectsButton.addEventListener('click', projectsSection.scrollIntoView());
+// contactMeButton.addEventListener('click', contactMeSection.scrollIntoView());
 
 const welcomes = ["Welcome", "Bienvenue", "欢迎光临"];
 
 window.onload = function() {
-    // function order(callback) {
-    //     printAndRemove("initializing....");
-    //     callback();
-    // }
-    printAndRemove(welcomes[0])
-        //"initializing....");
+
+    printAndRemove(welcomeText, "initializing....");
+
+    let i = 0;
+
+    setInterval(function() {
+        let message = welcomes[i % 3];
+        printAndRemove(welcomeText, message);
+        //toggleUnderscore(welcomeText, message);
+        i++;
+    }, 10000);
+
+    aboutMeButton.addEventListener('click', function() { aboutMeSection.scrollIntoView() });
+    projectsButton.addEventListener('click', function() { projectsSection.scrollIntoView() });
+    contactMeButton.addEventListener('click', function() { contactMeSection.scrollIntoView() });
+
 }
 
-async function printByLetter(index, message, repeats) {
+function toggleUnderscore(selector, message) {
+    if (message != "initializing....") {
 
+        if (selector.innerHTML.length === message.length) {
 
-    if (index < message.length) {
-
-        welcomeText.innerHTML = message.substring(0, index);
-        welcomeText.append(message[index++]);
-        welcomeText.append("_");
-
-        if (index == message.length) {
-            if (message == "initializing....") {
-                if (repeats < 9) {
-                    repeats++;
-                    index = 12;
-                    welcomeText.innerHTML = "initializing";
-                }
-            } else {
-                let flash = 0;
-                setInterval(function() {
-                    if (flash % 2 == 0) {
-                        welcomeText.innerHTML = message;
-                    } else {
-                        welcomeText.append("_");
-                    }
-                    flash++;
-                }, 500);
-            }
-
-            // if (message[index] == "_") {
-            //     welcomeText.innerHTML = substring(0, index - 1);
-            // } else {
-            //     message = message + "_";
-            // }
         }
-
-
-        setTimeout(function() { printByLetter(index, message, repeats) }, 90)
     }
 }
 
-function printAndRemove(message) {
-    printByLetter(0, message, 0);
+function printByLetter(selector, index, message, repeats) {
+
+    if (index < message.length) {
+
+        (selector).innerHTML = message.substring(0, index);
+        (selector).append(message[index++]);
+
+        if (message != "initializing....") {
+            (selector).append("|");
+        }
+
+        if (index == message.length) {
+            if (message == "initializing....") {
+                if (repeats < 16) {
+                    repeats++;
+                    index = 12;
+                    (selector).innerHTML = "initializing";
+                } else {
+                    let toggleUnderscore = 0;
+
+                    setInterval(function() {
+                        if (toggleUnderscore) {
+                            (selector).append("|");
+                        } else {
+                            (selector).innerHTML = (selector).innerHTML.replace("|", "");
+                        }
+
+                        toggleUnderscore = !toggleUnderscore;
+
+                    }, 500);
+                }
+            }
+        }
+
+
+        setTimeout(function() { printByLetter(selector, index, message, repeats) }, 90)
+    }
+}
+
+function printAndRemove(selector, message) {
+    printByLetter(selector, 0, message, 0);
     //add remove part :P
 
-    // function removeByLetter(index, message) {
-    //     welcomeText.innerHTML = message.substring(0, index--);
+    function removeByLetter(selector, index, message) {
 
-    //     if (message.substring(0, index) == "") {
-    //         welcomeText.innerHTML = " ";
-    //     }
+        if (message != "initializing....") {
+            (selector).innerHTML = message.substring(0, index--) + "|";
+        } else {
+            (selector).innerHTML = message.substring(0, index--);
+        }
 
-    //     setTimeout(function() { removeByLetter(index, message) }, 90);
 
-    // }
+        if (message.substring(0, index) == "") {
+            (selector).innerHTML = " ";
+            message = " ";
+            return message;
+        }
 
-    // setTimeout(function() {
-    //     let index = message.length;
-    //     removeByLetter(index, message);
-    // }, 8000);
+        setTimeout(function() { removeByLetter(selector, index, message) }, 90);
+
+    }
+
+    setTimeout(function() {
+        let index = message.length;
+        removeByLetter(selector, index, message);
+    }, 7500);
+
+    (selector).innerHTML = " ";
 }
