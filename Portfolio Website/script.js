@@ -35,7 +35,7 @@ window.onload = function() {
     backToTop.addEventListener('click', function(){welcomeSection.scrollIntoView()});
 
     setInterval(function(){
-        if(!elementInView(welcomeSection)){
+        if(window.innerHeight >= aboutMeSection.getBoundingClientRect().bottom){//!elementInView(welcomeSection)){
             backToTop.classList.add("back-to-top");
         }
         else{
