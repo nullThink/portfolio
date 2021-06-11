@@ -1,0 +1,135 @@
+    #entire-site {
+        display: flex;
+        flex-direction: column;
+        font-family: 'Allerta Stencil';
+        /* background-color: #ffffff; */
+        overflow: hidden;
+    }
+    
+    h1,
+    h2,
+    h4 {
+        padding: 2%;
+    }
+    
+    #to-center {
+        text-align: center;
+        padding: 5%;
+    }
+    
+    .buttons-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: space-evenly;
+        padding-bottom: 10%;
+    }
+    
+    .about-me-button {
+        flex: wrap;
+        background-color: #CBF3F0;
+        margin: 2%;
+        border: 0;
+        font-family: inherit;
+        font-size: 30px;
+    }
+    
+    .projects-button {
+        flex: wrap;
+        background-color: #FFBF69;
+        margin: 2%;
+        border: 0;
+        font-family: inherit;
+        font-size: 30px;
+    }
+    
+    .contact-me-button {
+        flex: wrap;
+        background-color: #FFC300;
+        color: #001D3D;
+        margin: 2%;
+        border: 0;
+        font-family: inherit;
+        font-size: 30px;
+    }
+    
+    #welcome-section {
+        flex: auto;
+        /* padding-bottom: 50%; */
+        font-size: 90%;
+        background-color: #2EC4B6;
+        height: 30%;
+    }
+    
+    #welcome-text {
+        /* flex: wrap; */
+        font-size: 10vw;
+        margin-left: 13.5%;
+        padding-bottom: inherit;
+    }
+    
+    #about-me {
+        flex: wrap;
+        /*padding-bottom: 50%;*/
+        background-color: #CBF3F0;
+        height: 100vh;
+    }
+    
+    #about-me h1 {
+        margin-top: 2%;
+    }
+    
+    #about-me .info {
+        display: flex;
+        flex-direction: row;
+        align-items: space-between;
+    }
+    
+    #about-me .info h2 {
+        flex: wrap;
+    }
+    
+    #projects {
+        flex: auto;
+        /* padding-bottom: 50%; */
+        background-color: #FFBF69;
+        height: 100vh;
+    }
+    
+    #contact-me {
+        flex: auto;
+        /* padding-bottom: 50%; */
+        background-color: #FF9F1C;
+        height: 100vh;
+    }
+    
+    #about-me .content {
+        display: flex;
+    }
+    
+    #about-me img {
+        width: 10%;
+        height: 50%;
+        margin-left: 5%;
+        margin-right: 2%;
+        padding: 0.5%;
+        flex: auto;
+        border: solid;
+        border-radius: 20%;
+        border-width: 3px;
+    }
+    
+    #personal-info-contain {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    #personal-info img {
+        flex: auto;
+        width: 20em;
+        height: 20em;
+    }
+    
+    .form:focus {
+        border: 0;
+    }
