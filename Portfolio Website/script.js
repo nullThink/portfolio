@@ -10,11 +10,9 @@ const aboutMeSection = document.querySelector("#about-me");
 const projectsSection = document.querySelector("#projects");
 const contactMeSection = document.querySelector("#contact-me");
 
-welcomeSection.style.height = window.innerHeight + 100;
+const backToTop = document.querySelector("#reset-button");
 
-// aboutMeButton.addEventListener('click', aboutMeSection.scrollIntoView());
-// projectsButton.addEventListener('click', projectsSection.scrollIntoView());
-// contactMeButton.addEventListener('click', contactMeSection.scrollIntoView());
+welcomeSection.style.height = window.innerHeight + 100;
 
 const welcomes = ["Welcome", "Bienvenue", "欢迎光临"];
 
@@ -34,7 +32,16 @@ window.onload = function() {
     aboutMeButton.addEventListener('click', function() { aboutMeSection.scrollIntoView() });
     projectsButton.addEventListener('click', function() { projectsSection.scrollIntoView() });
     contactMeButton.addEventListener('click', function() { contactMeSection.scrollIntoView() });
+    backToTop.addEventListener('click', function(){welcomeSection.scrollIntoView()});
 
+    setInterval(function(){
+        if(!elementInView(welcomeSection)){
+            backToTop.classList.add("back-to-top");
+        }
+        else{
+            backToTop.classList.remove("back-to-top");
+        }
+    }, 1);
 }
 
 function toggleUnderscore(selector, message) {
@@ -114,4 +121,9 @@ function printAndRemove(selector, message) {
     }, 7500);
 
     (selector).innerHTML = " ";
+}
+
+function elementInView(selector){
+    let elementLimit = selector.getBoundingClientRect();
+    return (elementLimit.top >= 0 && (elementLimit.bottom >= window.innerHeight || document.documentElement.clientHeight));
 }
