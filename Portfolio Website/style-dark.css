@@ -17,7 +17,11 @@ h4 {
     padding: 5%;
 }
 
+
+/* Buttons and Container*/
+
 .buttons-container {
+    z-index: 1;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -28,13 +32,21 @@ h4 {
 .about-me-button {
     flex: wrap;
     background-color: #001D3D;
+    color: #FFD60A;
     margin: 2%;
+    border: 0;
+    font-family: inherit;
+    font-size: 30px;
 }
 
 .projects-button {
     flex: wrap;
     background-color: #003566;
+    color: #FFC300;
     margin: 2%;
+    border: 0;
+    font-family: inherit;
+    font-size: 30px;
 }
 
 .contact-me-button {
@@ -42,76 +54,135 @@ h4 {
     background-color: #FFC300;
     color: #001D3D;
     margin: 2%;
+    border: 0;
+    font-family: inherit;
+    font-size: 30px;
 }
 
+
+/* Welcome Section */
+
 #welcome-section {
+    z-index: 0;
     flex: auto;
     /* padding-bottom: 50%; */
     font-size: 90%;
     background-color: #000814;
+    height: 30%;
 }
 
 #welcome-text {
     flex: wrap;
-    font-size: 1000%;
+    font-size: 10vw;
     margin-left: 13.5%;
     padding-bottom: inherit;
 }
 
+
+/* About Me Section */
+
 #about-me {
-    flex: auto;
+    z-index: 0;
+    flex: wrap;
     background-color: #001D3D;
+    height: 100%;
 }
 
-#projects {
-    flex: auto;
-    background-color: #003566;
+#about-me h1 {
+    margin-top: 2%;
 }
 
-#contact-me {
-    flex: auto;
-    color: #001D3D;
-    background-color: #FFC300;
-}
-
-#about-me .content {
+#about-me .info {
     display: flex;
+    flex-direction: row;
+    align-items: space-between;
+    justify-content: center;
+}
+
+#about-me .info h2 {
+    flex: wrap;
 }
 
 #about-me img {
-    width: 20em;
-    height: 20em;
+    width: 200px;
+    height: 200px;
     margin-left: 5%;
-    padding: 1%;
-    flex: wrap;
+    margin-right: 2%;
+    padding: 0.5%;
+    flex: auto;
     border: solid;
     border-radius: 20%;
+    border-width: 3px;
 }
 
-.form {
-    display: flex;
-    flex-direction: column;
-    margin-left: 10%;
-    border-radius: 20px;
-}
 
-#text-box {
+/* Projects Section */
+
+#projects {
+    z-index: 0;
     flex: auto;
-    padding: 2%;
-    margin-right: 10%;
-}
-
-input {
     background-color: #003566;
-    padding: 2% 30%;
-    border-radius: 10px;
-    border-style: inherit;
+    height: 100%;
 }
 
-#message-box {
-    width: 10%;
-    height: 10%;
-    resize: none;
+
+/* Contact Me Section */
+
+#contact-me {
+    z-index: 0;
+    flex: auto;
+    color: #001D3D;
+    background-color: #FFC300;
+    height: 100%;
+}
+
+#personal-info-contain {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2em;
+}
+
+.linkedin {
+    flex: auto;
+    height: 5em;
+    width: 5em;
+}
+
+.email {
+    flex: auto;
+    height: 10em;
+    width: 10em;
+}
+
+.form:focus {
+    border: 0;
+}
+
+.back-to-top {
+    opacity: 1;
+    z-index: 1;
+    background-color: #001D3D;
+    color: #FFD60A;
+    border: 0;
+    border-radius: 10px;
+    padding: 2%;
+    left: 85vw;
+    top: 85vh;
+    position: fixed;
+    animation-name: opaqueChange;
+    animation-duration: 3s;
+    opacity: 0.8;
+}
+
+@keyframes opaqueChange {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.8;
+    }
 }
 
 

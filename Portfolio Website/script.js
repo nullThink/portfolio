@@ -32,13 +32,12 @@ window.onload = function() {
     aboutMeButton.addEventListener('click', function() { aboutMeSection.scrollIntoView() });
     projectsButton.addEventListener('click', function() { projectsSection.scrollIntoView() });
     contactMeButton.addEventListener('click', function() { contactMeSection.scrollIntoView() });
-    backToTop.addEventListener('click', function(){welcomeSection.scrollIntoView()});
+    backToTop.addEventListener('click', function() { welcomeSection.scrollIntoView() });
 
-    setInterval(function(){
-        if(window.innerHeight >= aboutMeSection.getBoundingClientRect().bottom){//!elementInView(welcomeSection)){
+    setInterval(function() {
+        if (window.innerHeight >= aboutMeSection.getBoundingClientRect().top) { //(!elementInView(welcomeSection)){
             backToTop.classList.add("back-to-top");
-        }
-        else{
+        } else {
             backToTop.classList.remove("back-to-top");
         }
     }, 1);
@@ -62,6 +61,7 @@ function printByLetter(selector, index, message, repeats) {
 
         if (message != "initializing....") {
             (selector).append("|");
+            selector.innerHTML = selector.innerHTML.replace("|", "");
         }
 
         if (index == message.length) {
@@ -123,7 +123,7 @@ function printAndRemove(selector, message) {
     (selector).innerHTML = " ";
 }
 
-function elementInView(selector){
+function elementInView(selector) {
     let elementLimit = selector.getBoundingClientRect();
     return (elementLimit.top >= 0 && (elementLimit.bottom >= window.innerHeight || document.documentElement.clientHeight));
 }
