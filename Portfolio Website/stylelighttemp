@@ -15,7 +15,6 @@
             text-align: center;
             padding: 5%;
         }
-        /* Buttons and Container*/
         
         .buttons-container {
             z-index: 1;
@@ -53,7 +52,6 @@
             font-family: inherit;
             font-size: 30px;
         }
-        /* Welcome Section */
         
         #welcome-section {
             z-index: 0;
@@ -70,7 +68,6 @@
             margin-left: 13.5%;
             padding-bottom: inherit;
         }
-        /* About Me Section */
         
         #about-me {
             z-index: 0;
@@ -87,12 +84,28 @@
         #about-me .info {
             display: flex;
             flex-direction: row;
-            align-items: space-evenly;
+            align-items: space-between;
             justify-content: center;
         }
         
         #about-me .info h2 {
             flex: wrap;
+        }
+        
+        #projects {
+            z-index: 0;
+            flex: auto;
+            /* padding-bottom: 50%; */
+            background-color: #FFBF69;
+            height: 100%;
+        }
+        
+        #contact-me {
+            z-index: 0;
+            flex: auto;
+            /* padding-bottom: 50%; */
+            background-color: #FF9F1C;
+            height: 100%;
         }
         
         #about-me img {
@@ -105,44 +118,6 @@
             border: solid;
             border-radius: 20%;
             border-width: 3px;
-        }
-        /* Projects Section */
-        
-        #projects {
-            z-index: 0;
-            flex: auto;
-
-            display: flex;
-            flex-direction: column;
-            /* padding-bottom: 50%; */
-            background-color: #FFBF69;
-            height: 100%;
-        }
-        
-        #projects h2 {
-            padding-bottom: 0;
-        }
-        
-        #projects li {
-            list-style-type: none;
-        }
-
-        #project-list-w-bullets{
-            list-style-type:inherit;
-        }
-        
-        .subheader-content {
-            margin-left: 5%;
-            margin-right: 2%;
-        }
-        /* Contact Me Section */
-        
-        #contact-me {
-            z-index: 0;
-            flex: auto;
-            /* padding-bottom: 50%; */
-            background-color: #FF9F1C;
-            height: 100%;
         }
         
         #personal-info-contain {
@@ -165,15 +140,8 @@
             width: 10em;
         }
         
-        #pi-text-contain{
-            display:flex;
-            flex-direction: column;
-            align-items:stretch;
-            border-right: solid;
-        }
-
-        #pi-text-contain h4{
-            flex:auto;
+        .form:focus {
+            border: 0;
         }
         
         .back-to-top {
